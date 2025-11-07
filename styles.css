@@ -1,0 +1,244 @@
+/* Basic responsive layout (simple, dark warm theme) */
+:root {
+  --bg-start: #1a0a06;
+  --bg-end: #0d0604;
+  --glow: rgba(255, 100, 20, 0.18);
+  --text: #ffe7d1;
+  --muted: #ffd9c0;
+  --link: #ffb28a;
+  --hover-bg: rgba(255, 140, 60, 0.12);
+  --border: rgba(255, 255, 255, 0.12);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  line-height: 1.55;
+  color: var(--text);
+  background: radial-gradient(
+      80rem 40rem at 10% 5%,
+      rgba(255, 120, 40, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      65rem 30rem at 90% 0%,
+      rgba(255, 70, 10, 0.06),
+      transparent 40%
+    ),
+    linear-gradient(180deg, var(--bg-start), var(--bg-end) 60%);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0 1rem;
+}
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.12) 70%,
+    rgba(0, 0, 0, 0)
+  );
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 64px;
+  width: 100%;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--text);
+}
+.brand .logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #ff6a00;
+  box-shadow: 0 8px 26px var(--glow);
+}
+.brand-text {
+  font-size: 1.25rem;
+}
+.menu-toggle {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: none;
+  color: var(--text);
+}
+.menu-toggle:focus {
+  outline: 2px solid #ff6a00;
+  outline-offset: 2px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+  display: block;
+}
+.nav-links a:hover {
+  background: var(--hover-bg);
+}
+
+/* Mobile nav */
+@media (max-width: 720px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    display: none;
+    border-top: 1px solid var(--border);
+    padding-top: 0.5rem;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-links a {
+    padding: 0.65rem 0.75rem;
+  }
+}
+
+.hero {
+  padding: 2.5rem 0 1rem;
+  text-align: center;
+}
+.hero h2 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  margin: 0 0 0.75rem;
+}
+.hero p {
+  max-width: 46rem;
+  margin: 0.75rem auto;
+  color: var(--muted);
+}
+.hero img {
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  border-radius: 12px;
+  border: 0;
+}
+
+/* Phone frame for screenshot */
+.phone-frame {
+  margin: 1.5rem auto 0;
+  width: 280px;
+  padding: 12px;
+  border: 1px solid #333;
+  border-radius: 32px;
+  background: #111;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+.phone-frame img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+.pitch,
+.features,
+#videos {
+  padding: 2rem 0 1rem;
+}
+.pitch p,
+.features,
+#videos {
+  color: var(--muted);
+}
+.features .feature-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  max-width: 40rem;
+}
+.features .feature-list li {
+  margin: 0.4rem 0;
+}
+
+#videos article {
+  margin: 1.75rem 0;
+}
+.video {
+  position: relative;
+  width: 80%;
+  max-width: none;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  margin: 0.75rem 0;
+}
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.site-footer {
+  padding: 2.5rem 0 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.site-footer a {
+  color: var(--link);
+}
+
+/* Accessibility tweaks */
+:focus-visible {
+  outline: 2px solid #ff6a00;
+  outline-offset: 2px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
