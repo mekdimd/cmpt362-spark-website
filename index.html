@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Spark — Tap to network</title>
+    <meta
+      name="description"
+      content="Spark — Spark connections easily with the tap of a phone. Share your profile with NFC or QR, manage connections, and follow up with intent."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main">
+        <a class="brand" href="#">
+          <img class="logo" src="assets/logo.png" alt="Spark logo" />
+          <span class="brand-text">Spark</span>
+        </a>
+        <button
+          class="menu-toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          data-menu-toggle
+        >
+          ☰
+        </button>
+        <ul id="primary-nav" class="nav-links" data-nav>
+          <li><a href="#pitch">Project Pitch</a></li>
+          <li><a href="#videos">Videos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero container">
+      <h2>Tap • Share • Grow</h2>
+      <p>
+        Share a single, polished profile with one tap. Spark logs connections,
+        associates them to events, and helps you follow up so your network keeps
+        growing.
+      </p>
+      <p>
+        <a href="assets/spark.apk" download>Download APK</a> ·
+        <a
+          href="https://github.com/mekdimd/cmpt362-spark-website"
+          target="_blank"
+          rel="noopener"
+          >View Source</a
+        >
+      </p>
+      <div class="phone-frame">
+        <img src="assets/app-screenshot.png" alt="Spark app screenshot" />
+      </div>
+    </section>
+
+    <main id="pitch" class="container">
+      <section class="pitch">
+        <h2>Project Pitch</h2>
+        <p>
+          Spark is an Android-first networking app that uses phone-to-phone NFC
+          taps (with QR fallback) to share a consolidated profile—socials,
+          resume, and website—instantly. Connections are logged and organized by
+          event and time, and a map and analytics help you follow up
+          intentionally.
+        </p>
+      </section>
+      <section class="features">
+        <h3>Features</h3>
+        <ul class="feature-list">
+          <li>Update profile (photo, socials, website, resume planned)</li>
+          <li>Share via NFC or QR</li>
+          <li>Receive profiles easily</li>
+          <li>Manage connections with tags, map, and analytics</li>
+        </ul>
+      </section>
+    </main>
+
+    <section id="videos" class="container">
+      <h2>Pitch &amp; Show &amp; Tell</h2>
+      <article>
+        <h3>Pitch</h3>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/KT5QWkdf1a0"
+            title="Spark Pitch"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </article>
+      <article>
+        <h3>Show &amp; Tell 1</h3>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/bVB9TAU7z9o"
+            title="Spark Show &amp; Tell 1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </article>
+      <article>
+        <h3>Show &amp; Tell 2 (Planned)</h3>
+        <p>Coming soon.</p>
+      </article>
+      <article>
+        <h3>Final (Planned)</h3>
+        <p>Coming soon.</p>
+      </article>
+    </section>
+
+    <footer role="contentinfo" class="site-footer container">
+      <p>Mekdim Dereje ⋅ Alvyn Kang ⋅ Arnell Kang</p>
+      <p>
+        <a
+          href="https://github.com/mekdimd/cmpt362-spark-website"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
