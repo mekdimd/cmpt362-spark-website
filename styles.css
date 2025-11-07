@@ -46,6 +46,81 @@ a:focus {
   text-decoration: underline;
 }
 
+/* Simple buttons */
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--hover-bg);
+  color: var(--text);
+  box-shadow: 0 2px 12px var(--glow);
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.05s ease;
+}
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+  background: rgba(255, 140, 60, 0.18);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn--primary {
+  background: rgba(255, 120, 40, 0.22);
+  border-color: rgba(255, 170, 120, 0.4);
+}
+.btn--primary:hover,
+.btn--primary:focus {
+  background: rgba(255, 120, 40, 0.3);
+}
+
+/* Typography: larger headings with clear hierarchy */
+h1,
+h2,
+h3,
+h4 {
+  /* line-height: 1.15; */
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+h1 {
+  font-size: clamp(2.2rem, 6vw, 3.25rem);
+  margin: 1.4rem 0 0.6rem;
+}
+h2 {
+  font-size: clamp(1.9rem, 4.5vw, 2.5rem);
+  margin: 1.2rem 0 0.55rem;
+}
+h3 {
+  font-size: clamp(1.35rem, 3vw, 1.6rem);
+  margin: 1rem 0 0.45rem;
+}
+
+/* Center most text content inside sections */
+.container h1,
+.container h2,
+.container h3,
+.container p {
+  text-align: center;
+}
+
+/* Improve paragraph readability on wide screens */
+p {
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .container {
   width: 100%;
   margin: 0;
@@ -62,6 +137,21 @@ a:focus {
   position: sticky;
   top: 0;
   z-index: 50;
+  transition: background 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+/* More defined, translucent look once the page is scrolled */
+.site-header.scrolled {
+  background: linear-gradient(
+    180deg,
+    rgba(10, 6, 4, 0.65),
+    rgba(10, 6, 4, 0.35) 70%,
+    rgba(10, 6, 4, 0)
+  );
+  backdrop-filter: saturate(140%) blur(8px);
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
 }
 .nav {
   display: flex;
@@ -165,7 +255,6 @@ a:focus {
   border-radius: 12px;
   border: 0;
 }
-
 /* Phone frame for screenshot */
 .phone-frame {
   margin: 1.5rem auto 0;
@@ -175,27 +264,31 @@ a:focus {
   border-radius: 32px;
   background: #111;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  min-height: 500px;
+  display: block;
 }
 .phone-frame img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 20px;
   display: block;
 }
 
-.pitch,
-.features,
-#videos {
-  padding: 2rem 0 1rem;
-}
-.pitch p,
-.features,
-#videos {
-  color: var(--muted);
+.video {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  margin: 0.75rem auto; /* center */
 }
 .features .feature-list {
   list-style: disc;
   padding-left: 1.25rem;
   max-width: 40rem;
+  margin: 0.75rem auto; /* center list block */
+  text-align: left; /* keep bullets readable */
 }
 .features .feature-list li {
   margin: 0.4rem 0;
@@ -204,13 +297,14 @@ a:focus {
 #videos article {
   margin: 1.75rem 0;
 }
+
 .video {
   position: relative;
-  width: 80%;
-  max-width: none;
+  width: 100%;
+  max-width: 960px; /* keep centered and constrained */
   aspect-ratio: 16 / 9;
   background: #000;
-  margin: 0.75rem 0;
+  margin: 0.75rem auto; /* center horizontally */
 }
 .video iframe {
   position: absolute;
@@ -234,11 +328,4 @@ a:focus {
 :focus-visible {
   outline: 2px solid #ff6a00;
   outline-offset: 2px;
-}
-
-/* Reduce motion */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
 }

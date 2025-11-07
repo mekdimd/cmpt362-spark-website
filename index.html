@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Spark — Tap to network</title>
+    <title>Spark - Tap to Connect</title>
     <meta
       name="description"
       content="Spark - Spark connections easily with the tap of a phone. Share your profile with NFC or QR, manage connections, and follow up with intent."
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script defer src="main.js"></script>
   </head>
   <body>
@@ -41,13 +42,16 @@
         associates them to events, and helps you follow up so your network keeps
         growing.
       </p>
-      <p>
-        <a href="assets/spark.apk" download>Download APK</a> ·
+      <p class="actions">
+        <a class="btn btn--primary" href="assets/spark.apk" download
+          >Download APK</a
+        >
         <a
+          class="btn"
           href="https://github.com/mekdimd/cmpt362-spark"
           target="_blank"
           rel="noopener"
-          >View Source</a
+          >View GitHub</a
         >
       </p>
       <div class="phone-frame">
@@ -57,20 +61,20 @@
 
     <main id="pitch" class="container">
       <section class="pitch">
-        <h2>Project Pitch</h2>
+        <!-- <h1>Project Pitch</h1> -->
         <p>
-          Spark is an Android-first networking app that uses phone-to-phone NFC
-          taps (with QR fallback) to share a consolidated profile, socials,
+          Spark is a networking app that uses phone-to-phone NFC
+          taps to share a consolidated profile, socials,
           resume, and website, instantly. Connections are logged and organized
           by event and time, and a map and analytics help you follow up
           intentionally.
         </p>
       </section>
       <section class="features">
-        <h3>Features</h3>
+        <h2>Features</h2>
         <ul class="feature-list">
           <li>Update profile (photo, socials, website, resume planned)</li>
-          <li>Share via NFC or QR</li>
+          <li>Share via NFC or QR Code</li>
           <li>Receive profiles easily</li>
           <li>Manage connections with tags, map, and analytics</li>
         </ul>
@@ -78,35 +82,33 @@
     </main>
 
     <section id="videos" class="container">
-      <h2>Pitch &amp; Show &amp; Tell</h2>
+      <!-- <h1>Videos</h1> -->
       <article>
-        <h3>Pitch</h3>
+        <h2>Pitch</h2>
         <div class="video">
           <iframe
             src="https://www.youtube.com/embed/KT5QWkdf1a0"
             title="Spark Pitch"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
         </div>
       </article>
       <article>
-        <h3>Show &amp; Tell 1</h3>
+        <h2>Show &amp; Tell 1</h2>
         <div class="video">
           <iframe
             src="https://www.youtube.com/embed/bVB9TAU7z9o"
             title="Spark Show &amp; Tell 1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
         </div>
       </article>
       <article>
-        <h3>Show &amp; Tell 2 (Planned)</h3>
+        <h2>Show &amp; Tell 2</h2>
         <p>Coming soon.</p>
       </article>
       <article>
-        <h3>Final (Planned)</h3>
+        <h2>Final</h2>
         <p>Coming soon.</p>
       </article>
     </section>
