@@ -1,7 +1,7 @@
 /* Basic responsive layout (simple, dark warm theme) */
 :root {
-  --bg-start: #1a0a06;
-  --bg-end: #0d0604;
+  --bg-start: #41170b;
+  --bg-end: #270f09;
   --glow: rgba(255, 100, 20, 0.18);
   --text: #ffe7d1;
   --muted: #ffd9c0;
@@ -159,6 +159,7 @@ p {
   gap: 1rem;
   min-height: 64px;
   width: 100%;
+  padding: 0 1rem;
   justify-content: space-between;
 }
 .brand {
@@ -249,7 +250,7 @@ p {
   padding: 0 0.5rem;
 }
 .hero-content {
-  flex: 1 1 520px;
+  /* flex: 1 1 520px; */
   max-width: 640px;
 }
 .hero-phone {
@@ -264,6 +265,7 @@ p {
 .hero p {
   max-width: 46rem;
   margin: 0.75rem auto;
+  padding: 0 1rem;
   color: var(--muted);
 }
 .hero img {
@@ -314,6 +316,7 @@ p {
 
 #videos article {
   margin: 1.75rem 0;
+  padding: 0 1rem;
 }
 
 .video {
