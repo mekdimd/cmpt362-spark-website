@@ -456,19 +456,16 @@ p {
 
 /* Mobile carousel - show 1 slide centered */
 @media (max-width: 600px) {
-  .carousel-track-container {
-    display: flex;
-    justify-content: center;
-  }
   .carousel-track {
-    justify-content: flex-start;
+    gap: 0;
   }
   .carousel-slide {
     flex: 0 0 100%;
     width: 100%;
+    min-width: 100%;
   }
   .carousel-slide .phone-frame {
-    width: 240px;
+    width: 220px;
     margin: 0 auto;
   }
 }
