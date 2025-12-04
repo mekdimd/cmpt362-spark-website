@@ -345,15 +345,6 @@ p {
   color: var(--link);
 }
 
-/* Top action buttons */
-.top-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-}
-
 /* Gallery Carousel */
 #gallery {
   padding: 2rem 0 3rem;
@@ -460,5 +451,24 @@ p {
   }
   .phone-frame {
     margin-top: 0.75rem;
+  }
+}
+
+/* Mobile carousel - show 1 slide centered */
+@media (max-width: 600px) {
+  .carousel-track-container {
+    display: flex;
+    justify-content: center;
+  }
+  .carousel-track {
+    justify-content: flex-start;
+  }
+  .carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  .carousel-slide .phone-frame {
+    width: 240px;
+    margin: 0 auto;
   }
 }

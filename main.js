@@ -44,6 +44,13 @@
 
     function getSlideWidth() {
       const slide = slides[0];
+      const containerWidth = document.querySelector(
+        ".carousel-track-container"
+      ).offsetWidth;
+      if (window.innerWidth < 600) {
+        // On mobile, slides take full width
+        return containerWidth;
+      }
       const style = getComputedStyle(track);
       const gap = parseFloat(style.gap) || 24;
       return slide.offsetWidth + gap;
