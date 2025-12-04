@@ -175,7 +175,7 @@ p {
   height: 40px;
   border-radius: 12px;
   object-fit: cover;
-  background: #ff6a00;
+  background: transparent;
   box-shadow: 0 8px 26px var(--glow);
 }
 .brand-text {
@@ -343,6 +343,105 @@ p {
 }
 .site-footer a {
   color: var(--link);
+}
+
+/* Top action buttons */
+.top-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Gallery Carousel */
+#gallery {
+  padding: 2rem 0 3rem;
+}
+#gallery h2 {
+  margin-bottom: 1.5rem;
+}
+.gallery-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  gap: 1.5rem;
+}
+.carousel-slide {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carousel-slide .phone-frame {
+  width: 220px;
+  min-height: 400px;
+  margin: 0;
+  padding: 10px;
+}
+.carousel-slide .phone-frame img {
+  border-radius: 16px;
+}
+.slide-caption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+.carousel-btn {
+  background: rgba(255, 120, 40, 0.2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.carousel-btn:hover {
+  background: rgba(255, 120, 40, 0.35);
+}
+.carousel-btn:active {
+  transform: scale(0.95);
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.carousel-dot.active {
+  background: var(--link);
+}
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 /* Accessibility tweaks */
